@@ -1,0 +1,966 @@
+==436== NVPROF is profiling process 436, command: ./dct8x8
+==436== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==436== Profiling application: ./dct8x8
+==436== Profiling result:
+==436== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_per_warp","Instructions per warp",90.000000,90.000000,90.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"branch_efficiency","Branch Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"warp_execution_efficiency","Warp Execution Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_replay_overhead","Instruction Replay Overhead",0.001028,0.001028,0.001028
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gld_transactions_per_request","Global Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gst_transactions_per_request","Global Store Transactions Per Request",8.000000,8.000000,8.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"shared_store_transactions","Shared Store Transactions",24576,24576,24576
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"shared_load_transactions","Shared Load Transactions",131072,131072,131072
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gld_transactions","Global Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gst_transactions","Global Store Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_read_transactions","L2 Read Transactions",33212,33212,33212
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_write_transactions","L2 Write Transactions",65549,65549,65549
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"global_hit_rate","Global Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gld_requested_throughput","Requested Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gst_requested_throughput","Requested Global Store Throughput",45.052708GB/s,45.052708GB/s,45.051798GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gld_throughput","Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gst_throughput","Global Store Throughput",90.105416GB/s,90.105416GB/s,90.104528GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"tex_cache_hit_rate","Unified Cache Hit Rate",25.000000%,25.000000%,25.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",99.816895%,99.816895%,99.816895%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",90.823364%,90.823364%,90.823364%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"tex_cache_throughput","Unified Cache Throughput",90.105416GB/s,90.105416GB/s,90.104528GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",45.052708GB/s,45.052708GB/s,45.051798GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",90.105416GB/s,90.105416GB/s,90.104528GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_read_throughput","L2 Throughput (Reads)",45.663163GB/s,45.663163GB/s,45.662746GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_write_throughput","L2 Throughput (Writes)",90.123290GB/s,90.123290GB/s,90.123154GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"sysmem_write_throughput","System Memory Write Throughput",7.039485MB/s,7.039485MB/s,6.675720MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"shared_load_throughput","Shared Memory Load Throughput",720.843329GB/s,720.843329GB/s,720.842741GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"shared_store_throughput","Shared Memory Store Throughput",135.158124GB/s,135.158124GB/s,135.157257GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gld_efficiency","Global Memory Load Efficiency",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"gst_efficiency","Global Memory Store Efficiency",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"tex_cache_transactions","Unified Cache Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_sp","Floating Point Operations(Single Precision)",8912896,8912896,8912896
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",524288,524288,524288
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",4194304,4194304,4194304
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_executed","Instructions Executed",737280,737280,737280
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_issued","Instructions Issued",738773,738773,738773
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",1.052613%,1.052613%,1.052613%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",65.409480%,65.409480%,65.409480%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_memory_dependency","Issue Stall Reasons (Data Request)",4.019288%,4.019288%,4.019288%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_sync","Issue Stall Reasons (Synchronization)",9.451303%,9.451303%,9.451303%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_other","Issue Stall Reasons (Other)",11.744378%,11.744378%,11.744378%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",0.272722%,0.272722%,0.272722%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",6.559393%,6.559393%,6.559393%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"shared_efficiency","Shared Memory Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_fp_32","FP Instructions(Single)",4718592,4718592,4718592
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_integer","Integer Instructions",5767168,5767168,5767168
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_bit_convert","Bit-Convert Instructions",524288,524288,524288
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_control","Control-Flow Instructions",262144,262144,262144
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_compute_ld_st","Load/Store Instructions",9699328,9699328,9699328
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_misc","Misc Instructions",2621440,2621440,2621440
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"issue_slots","Issue Slots",607701,607701,607701
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"cf_issued","Issued Control-Flow Instructions",139264,139264,139264
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"cf_executed","Executed Control-Flow Instructions",139264,139264,139264
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"ldst_issued","Issued Load/Store Instructions",442368,442368,442368
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"ldst_executed","Executed Load/Store Instructions",360448,360448,360448
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",0.900872%,0.900872%,0.900872%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"stall_not_selected","Issue Stall Reasons (Not Selected)",0.589950%,0.589950%,0.589950%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"sm_activity","Multiprocessor Activity",83.727896%,83.727896%,83.727896%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"achieved_occupancy","Achieved Occupancy",0.891324,0.891324,0.891324
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"executed_ipc","Executed IPC",0.706171,0.706171,0.706171
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"issued_ipc","Issued IPC",0.700496,0.700496,0.700496
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"issue_slot_utilization","Issue Slot Utilization",14.405386%,14.405386%,14.405386%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",0.908196,0.908196,0.908196
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"l2_utilization","L2 Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"shared_utilization","Shared Memory Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"special_fu_utilization","Special Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"tex_fu_utilization","Texture Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",2.774143%,2.774143%,2.774143%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"dram_read_transactions","Device Memory Read Transactions",128,128,128
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"dram_write_transactions","Device Memory Write Transactions",12178,12178,12178
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"dram_read_throughput","Device Memory Read Throughput",180.210832MB/s,180.210832MB/s,179.290771MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"dram_write_throughput","Device Memory Write Throughput",16.743527GB/s,16.743527GB/s,16.743317GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"dram_utilization","Device Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1IDCT(float*, int, int, int)",1,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_per_warp","Instructions per warp",44.000000,44.394531,44.197266
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"branch_efficiency","Branch Efficiency",99.699190%,100.000000%,99.849595%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"warp_execution_efficiency","Warp Execution Efficiency",99.130967%,100.000000%,99.565483%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",96.496525%,97.345560%,96.921043%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_replay_overhead","Instruction Replay Overhead",0.004089,0.007147,0.005618
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gld_transactions_per_request","Global Load Transactions Per Request",8.000000,8.000000,8.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gst_transactions_per_request","Global Store Transactions Per Request",8.000000,8.000000,8.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"shared_store_transactions","Shared Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"shared_load_transactions","Shared Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gld_transactions","Global Load Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gst_transactions","Global Store Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_read_transactions","L2 Read Transactions",33152,33296,33224
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_write_transactions","L2 Write Transactions",65549,65549,65549
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"global_hit_rate","Global Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gld_requested_throughput","Requested Global Load Throughput",90.961485GB/s,103.845438GB/s,96.976757GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gst_requested_throughput","Requested Global Store Throughput",90.961485GB/s,103.845438GB/s,96.976757GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gld_throughput","Global Load Throughput",90.961485GB/s,103.845438GB/s,96.976757GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gst_throughput","Global Store Throughput",181.922969GB/s,207.690876GB/s,193.954445GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"tex_cache_hit_rate","Unified Cache Hit Rate",25.000000%,25.000000%,25.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",29.370117%,99.926758%,64.648438%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"tex_cache_throughput","Unified Cache Throughput",90.961485GB/s,103.845438GB/s,96.976757GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",90.961485GB/s,103.845438GB/s,96.976757GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",181.922969GB/s,207.690876GB/s,193.954445GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_read_throughput","L2 Throughput (Reads)",92.427173GB/s,105.062377GB/s,98.325312GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_write_throughput","L2 Throughput (Writes)",181.959056GB/s,207.732075GB/s,193.992630GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"sysmem_write_throughput","System Memory Write Throughput",14.212731MB/s,16.225849MB/s,14.305115MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"shared_load_throughput","Shared Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"shared_store_throughput","Shared Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gld_efficiency","Global Memory Load Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"gst_efficiency","Global Memory Store Efficiency",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"tex_cache_transactions","Unified Cache Transactions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_sp","Floating Point Operations(Single Precision)",4454888,4456448,4455668
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",524184,524288,524236
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",1834280,1835008,1834644
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",262144,262144,262144
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",262040,262144,262092
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_executed","Instructions Executed",360448,363680,362064
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_issued","Instructions Issued",363024,365167,364095
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",2.771086%,3.068904%,2.919995%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",42.229396%,52.458641%,47.344019%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_memory_dependency","Issue Stall Reasons (Data Request)",15.818012%,38.320411%,27.069212%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_sync","Issue Stall Reasons (Synchronization)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_other","Issue Stall Reasons (Other)",11.564460%,23.638808%,17.601634%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",1.520166%,2.656431%,2.088298%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",0.223359%,0.261797%,0.242578%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"shared_efficiency","Shared Memory Efficiency",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_fp_32","FP Instructions(Single)",3669704,3670016,3669860
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_integer","Integer Instructions",3407872,3409432,3408652
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_bit_convert","Bit-Convert Instructions",742395,742400,742397
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_control","Control-Flow Instructions",786432,786848,786640
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_compute_ld_st","Load/Store Instructions",786432,786432,786432
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_misc","Misc Instructions",1835008,1835216,1835112
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"issue_slots","Issue Slots",338448,340288,339368
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"cf_issued","Issued Control-Flow Instructions",40960,41768,41364
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"cf_executed","Executed Control-Flow Instructions",40960,41768,41364
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"ldst_issued","Issued Load/Store Instructions",106496,106496,106496
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"ldst_executed","Executed Load/Store Instructions",57344,57344,57344
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",1.952640%,2.913207%,2.432923%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"stall_not_selected","Issue Stall Reasons (Not Selected)",0.282216%,0.320465%,0.301341%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"sm_activity","Multiprocessor Activity",66.415187%,67.573980%,66.994583%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"achieved_occupancy","Achieved Occupancy",0.709619,0.775866,0.742743
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"executed_ipc","Executed IPC",0.901472,1.012605,0.957038
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"issued_ipc","Issued IPC",0.907914,1.044083,0.975999
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"issue_slot_utilization","Issue Slot Utilization",21.161253%,24.323729%,22.742491%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",1.040708,1.076447,1.058577
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"l2_utilization","L2 Cache Utilization","Low (2)","Low (3)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"shared_utilization","Shared Memory Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"special_fu_utilization","Special Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"tex_fu_utilization","Texture Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",2.950308%,3.259107%,3.104708%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"dram_read_transactions","Device Memory Read Transactions",96,21892,10994
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"dram_write_transactions","Device Memory Write Transactions",3902,11211,7556
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"dram_read_throughput","Device Memory Read Throughput",272.884454MB/s,69.378184GB/s,32.536685GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"dram_write_throughput","Device Memory Write Throughput",10.831656GB/s,35.528906GB/s,22.362918GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"dram_utilization","Device Memory Utilization","Low (1)","Low (3)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationFloat(float*, int)",2,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_per_warp","Instructions per warp",254.000000,254.000000,254.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"branch_efficiency","Branch Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"warp_execution_efficiency","Warp Execution Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_replay_overhead","Instruction Replay Overhead",0.008470,0.008470,0.008470
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gld_transactions_per_request","Global Load Transactions Per Request",8.000000,8.000000,8.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gst_transactions_per_request","Global Store Transactions Per Request",4.000000,4.000000,4.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"shared_store_transactions","Shared Store Transactions",24576,24576,24576
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"shared_load_transactions","Shared Load Transactions",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gld_transactions","Global Load Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gst_transactions","Global Store Transactions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_read_transactions","L2 Read Transactions",32912,32912,32912
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_write_transactions","L2 Write Transactions",32781,32781,32781
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"global_hit_rate","Global Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gld_requested_throughput","Requested Global Load Throughput",202.985346GB/s,202.985346GB/s,202.984549GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gst_requested_throughput","Requested Global Store Throughput",202.985346GB/s,202.985346GB/s,202.984549GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gld_throughput","Global Load Throughput",202.985346GB/s,202.985346GB/s,202.984549GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gst_throughput","Global Store Throughput",202.985346GB/s,202.985346GB/s,202.984549GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"tex_cache_hit_rate","Unified Cache Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",24.694824%,24.694824%,24.694824%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"tex_cache_throughput","Unified Cache Throughput",202.985346GB/s,202.985346GB/s,202.984549GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",202.985346GB/s,202.985346GB/s,202.984549GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",202.985346GB/s,202.985346GB/s,202.984549GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_read_throughput","L2 Throughput (Reads)",203.877372GB/s,203.877372GB/s,203.876756GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_write_throughput","L2 Throughput (Writes)",203.065876GB/s,203.065876GB/s,203.065574GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"sysmem_write_throughput","System Memory Write Throughput",31.716460MB/s,31.716460MB/s,31.471252MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"shared_load_throughput","Shared Memory Load Throughput",405.970692GB/s,405.970692GB/s,405.970030GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"shared_store_throughput","Shared Memory Store Throughput",608.956038GB/s,608.956038GB/s,608.955510GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gld_efficiency","Global Memory Load Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"gst_efficiency","Global Memory Store Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"tex_cache_transactions","Unified Cache Transactions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_sp","Floating Point Operations(Single Precision)",3670016,3670016,3670016
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",917504,917504,917504
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",917504,917504,917504
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",917504,917504,917504
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_executed","Instructions Executed",260096,260096,260096
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_issued","Instructions Issued",262299,262299,262299
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",3.268542%,3.268542%,3.268542%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",20.004137%,20.004137%,20.004137%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_memory_dependency","Issue Stall Reasons (Data Request)",22.579112%,22.579112%,22.579112%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_texture","Issue Stall Reasons (Texture)",0.046529%,0.046529%,0.046529%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_sync","Issue Stall Reasons (Synchronization)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_other","Issue Stall Reasons (Other)",27.213316%,27.213316%,27.213316%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",7.209213%,7.209213%,7.209213%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",3.485143%,3.485143%,3.485143%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"shared_efficiency","Shared Memory Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_fp_32","FP Instructions(Single)",2752512,2752512,2752512
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_integer","Integer Instructions",2949120,2949120,2949120
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_bit_convert","Bit-Convert Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_control","Control-Flow Instructions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_compute_ld_st","Load/Store Instructions",1835008,1835008,1835008
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_misc","Misc Instructions",753664,753664,753664
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"issue_slots","Issue Slots",229042,229042,229042
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"cf_issued","Issued Control-Flow Instructions",1024,1024,1024
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"cf_executed","Executed Control-Flow Instructions",1024,1024,1024
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"ldst_issued","Issued Load/Store Instructions",111616,111616,111616
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"ldst_executed","Executed Load/Store Instructions",62464,62464,62464
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",4.790279%,4.790279%,4.790279%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"stall_not_selected","Issue Stall Reasons (Not Selected)",11.403728%,11.403728%,11.403728%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"sm_activity","Multiprocessor Activity",38.261276%,38.261276%,38.261276%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"achieved_occupancy","Achieved Occupancy",0.484393,0.484393,0.484393
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"executed_ipc","Executed IPC",2.477058,2.477058,2.477058
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"issued_ipc","Issued IPC",2.498038,2.498038,2.498038
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"issue_slot_utilization","Issue Slot Utilization",54.532771%,54.532771%,54.532771%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",5.363924,5.363924,5.363924
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"l2_utilization","L2 Cache Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"shared_utilization","Shared Memory Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"special_fu_utilization","Special Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"tex_fu_utilization","Texture Function Unit Utilization","Mid (4)","Mid (4)","Mid (4)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Mid (5)","Mid (5)","Mid (5)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",5.265091%,5.265091%,5.265091%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"dram_read_transactions","Device Memory Read Transactions",120,120,120
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"dram_write_transactions","Device Memory Write Transactions",26252,26252,26252
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"dram_read_throughput","Device Memory Read Throughput",761.195047MB/s,761.195047MB/s,761.032104MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"dram_write_throughput","Device Memory Write Throughput",162.621195GB/s,162.621195GB/s,162.621029GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"dram_utilization","Device Memory Utilization","Mid (4)","Mid (4)","Mid (4)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2IDCT(float*, float*, int)",1,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_per_warp","Instructions per warp",252.000000,252.000000,252.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"branch_efficiency","Branch Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"warp_execution_efficiency","Warp Execution Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_replay_overhead","Instruction Replay Overhead",0.005615,0.014269,0.008184
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gld_transactions_per_request","Global Load Transactions Per Request",8.000000,8.000000,8.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gst_transactions_per_request","Global Store Transactions Per Request",4.000000,4.000000,4.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"shared_store_transactions","Shared Store Transactions",24576,24576,24576
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"shared_load_transactions","Shared Load Transactions",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gld_transactions","Global Load Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gst_transactions","Global Store Transactions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_read_transactions","L2 Read Transactions",32912,33544,33196
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_write_transactions","L2 Write Transactions",32781,32781,32781
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"global_hit_rate","Global Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gld_requested_throughput","Requested Global Load Throughput",150.055701GB/s,170.340572GB/s,156.181864GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gst_requested_throughput","Requested Global Store Throughput",150.055701GB/s,170.340572GB/s,156.181864GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gld_throughput","Global Load Throughput",150.055701GB/s,170.340572GB/s,156.181864GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gst_throughput","Global Store Throughput",150.055701GB/s,170.340572GB/s,156.181864GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"tex_cache_hit_rate","Unified Cache Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",4.235840%,44.934082%,39.803261%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",41.772461%,99.890137%,98.287752%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"tex_cache_throughput","Unified Cache Throughput",150.055701GB/s,170.340572GB/s,156.181864GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",150.055701GB/s,170.340572GB/s,156.181864GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",150.055701GB/s,170.340572GB/s,156.181864GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_read_throughput","L2 Throughput (Reads)",152.093973GB/s,173.576013GB/s,158.224255GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_write_throughput","L2 Throughput (Writes)",150.115232GB/s,170.408151GB/s,156.243332GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"sysmem_write_throughput","System Memory Write Throughput",23.446202MB/s,26.615714MB/s,23.841858MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"shared_load_throughput","Shared Memory Load Throughput",300.111401GB/s,340.681144GB/s,312.364660GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"shared_store_throughput","Shared Memory Store Throughput",450.167102GB/s,511.021716GB/s,468.547456GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gld_efficiency","Global Memory Load Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"gst_efficiency","Global Memory Store Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"tex_cache_transactions","Unified Cache Transactions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_sp","Floating Point Operations(Single Precision)",3670016,3670016,3670016
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",917504,917504,917504
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",917504,917504,917504
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",917504,917504,917504
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_executed","Instructions Executed",258048,258048,258048
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_issued","Instructions Issued",259497,261538,260178
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",0.673221%,24.639070%,11.827022%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",6.431081%,31.220469%,16.070008%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_memory_dependency","Issue Stall Reasons (Data Request)",29.657287%,75.100380%,49.601934%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.390358%,0.120885%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_sync","Issue Stall Reasons (Synchronization)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_other","Issue Stall Reasons (Other)",0.937288%,18.880283%,5.586658%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",2.400424%,15.121895%,5.328793%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",0.971007%,2.638424%,1.721626%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"shared_efficiency","Shared Memory Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_fp_32","FP Instructions(Single)",2752512,2752512,2752512
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_integer","Integer Instructions",2949120,2949120,2949120
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_bit_convert","Bit-Convert Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_control","Control-Flow Instructions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_compute_ld_st","Load/Store Instructions",1835008,1835008,1835008
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_misc","Misc Instructions",688128,688128,688128
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"issue_slots","Issue Slots",230333,232050,230843
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"cf_issued","Issued Control-Flow Instructions",1024,1024,1024
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"cf_executed","Executed Control-Flow Instructions",1024,1024,1024
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"ldst_issued","Issued Load/Store Instructions",111616,111616,111616
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"ldst_executed","Executed Load/Store Instructions",62464,62464,62464
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",0.951729%,8.364582%,4.288125%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"stall_not_selected","Issue Stall Reasons (Not Selected)",2.925106%,8.567008%,5.454948%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"sm_activity","Multiprocessor Activity",44.932775%,60.483858%,51.238831%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"achieved_occupancy","Achieved Occupancy",0.410319,0.525267,0.471240
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"executed_ipc","Executed IPC",0.831723,1.658396,1.345263
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"issued_ipc","Issued IPC",0.898488,1.718786,1.387665
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"issue_slot_utilization","Issue Slot Utilization",19.918865%,38.141478%,30.781925%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",1.820656,3.270475,2.819905
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"l2_utilization","L2 Cache Utilization","Low (2)","Low (3)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"shared_utilization","Shared Memory Utilization","Low (1)","Low (2)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (1)","Low (2)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"special_fu_utilization","Special Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"tex_fu_utilization","Texture Function Unit Utilization","Low (2)","Low (3)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Low (2)","Mid (4)","Low (3)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",3.136685%,4.383481%,3.838524%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"dram_read_transactions","Device Memory Read Transactions",17720,31428,20175
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"dram_write_transactions","Device Memory Write Transactions",9544,28411,11670
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"dram_read_throughput","Device Memory Read Throughput",85.860398GB/s,159.670540GB/s,96.162781GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"dram_write_throughput","Device Memory Write Throughput",46.558872GB/s,141.304465GB/s,55.625103GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"dram_utilization","Device Memory Utilization","Mid (4)","High (7)","Mid (4)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel2DCT(float*, float*, int)",101,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_per_warp","Instructions per warp",83.000000,83.000000,83.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"branch_efficiency","Branch Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"warp_execution_efficiency","Warp Execution Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_replay_overhead","Instruction Replay Overhead",0.001065,0.002572,0.001379
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",1.200000,1.200000,1.200000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gld_transactions_per_request","Global Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gst_transactions_per_request","Global Store Transactions Per Request",8.000000,8.000000,8.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"shared_store_transactions","Shared Store Transactions",24576,24576,24576
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"shared_load_transactions","Shared Load Transactions",98304,98304,98304
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gld_transactions","Global Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gst_transactions","Global Store Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_read_transactions","L2 Read Transactions",32924,33212,33068
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_write_transactions","L2 Write Transactions",65549,65549,65549
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"global_hit_rate","Global Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gld_requested_throughput","Requested Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gst_requested_throughput","Requested Global Store Throughput",37.336080GB/s,46.961409GB/s,38.172118GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gld_throughput","Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gst_throughput","Global Store Throughput",74.672159GB/s,93.922818GB/s,76.346099GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"tex_cache_hit_rate","Unified Cache Hit Rate",25.000000%,25.000000%,25.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",98.791504%,99.938965%,99.760742%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",90.486145%,91.215515%,90.876312%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"tex_cache_throughput","Unified Cache Throughput",74.672159GB/s,93.922818GB/s,76.346099GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",37.336080GB/s,46.961409GB/s,38.172118GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",74.672159GB/s,93.922818GB/s,76.346099GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_read_throughput","L2 Throughput (Reads)",37.513827GB/s,47.184980GB/s,38.523227GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_write_throughput","L2 Throughput (Writes)",74.686972GB/s,93.941449GB/s,76.361001GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"sysmem_write_throughput","System Memory Write Throughput",5.833762MB/s,7.337720MB/s,5.722046MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"shared_load_throughput","Shared Memory Load Throughput",448.032956GB/s,563.536908GB/s,458.081253GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"shared_store_throughput","Shared Memory Store Throughput",112.008239GB/s,140.884227GB/s,114.519149GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gld_efficiency","Global Memory Load Efficiency",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"gst_efficiency","Global Memory Store Efficiency",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"tex_cache_transactions","Unified Cache Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_sp","Floating Point Operations(Single Precision)",8912896,8912896,8912896
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",524288,524288,524288
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",4194304,4194304,4194304
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_executed","Instructions Executed",679936,679936,679936
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_issued","Instructions Issued",680660,681375,680824
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",0.909855%,1.074930%,0.961982%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",59.754990%,60.812108%,60.338563%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_memory_dependency","Issue Stall Reasons (Data Request)",4.285830%,4.968412%,4.620515%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_sync","Issue Stall Reasons (Synchronization)",10.782798%,11.297468%,11.025639%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_other","Issue Stall Reasons (Other)",17.705241%,18.102254%,17.850201%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",0.261170%,0.628032%,0.437434%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",3.348335%,3.468348%,3.422184%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"shared_efficiency","Shared Memory Efficiency",126.666667%,126.666667%,126.666667%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_fp_32","FP Instructions(Single)",4718592,4718592,4718592
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_integer","Integer Instructions",5505024,5505024,5505024
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_bit_convert","Bit-Convert Instructions",524288,524288,524288
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_control","Control-Flow Instructions",262144,262144,262144
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_compute_ld_st","Load/Store Instructions",8126464,8126464,8126464
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_misc","Misc Instructions",2621440,2621440,2621440
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"issue_slots","Issue Slots",565972,566687,566136
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"cf_issued","Issued Control-Flow Instructions",139264,139264,139264
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"cf_executed","Executed Control-Flow Instructions",139264,139264,139264
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"ldst_issued","Issued Load/Store Instructions",393216,393216,393216
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"ldst_executed","Executed Load/Store Instructions",311296,311296,311296
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",1.013075%,1.035654%,1.025067%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"stall_not_selected","Issue Stall Reasons (Not Selected)",0.309726%,0.332016%,0.318414%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"sm_activity","Multiprocessor Activity",83.392125%,84.598585%,84.336158%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"achieved_occupancy","Achieved Occupancy",0.879611,0.882176,0.881172
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"executed_ipc","Executed IPC",0.676406,0.684029,0.681552
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"issued_ipc","Issued IPC",0.677837,0.685195,0.682499
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"issue_slot_utilization","Issue Slot Utilization",14.093620%,14.243604%,14.188218%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",0.739755,0.749250,0.744630
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"l2_utilization","L2 Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"shared_utilization","Shared Memory Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"special_fu_utilization","Special Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"tex_fu_utilization","Texture Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",2.887658%,2.964040%,2.925105%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"dram_read_transactions","Device Memory Read Transactions",32,268,81
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"dram_write_transactions","Device Memory Write Transactions",11518,12814,12324
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"dram_read_throughput","Device Memory Read Throughput",37.358932MB/s,313.372579MB/s,96.321106MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"dram_write_throughput","Device Memory Write Throughput",13.152349GB/s,17.308134GB/s,14.356337GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"dram_utilization","Device Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernel1DCT(float*, int, int, int)",10,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_per_warp","Instructions per warp",323.000000,323.000000,323.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"branch_efficiency","Branch Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"warp_execution_efficiency","Warp Execution Efficiency",86.842105%,86.842105%,86.842105%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",86.532508%,86.532508%,86.532508%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_replay_overhead","Instruction Replay Overhead",0.003492,0.003492,0.003492
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gld_transactions_per_request","Global Load Transactions Per Request",4.000000,4.000000,4.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gst_transactions_per_request","Global Store Transactions Per Request",2.000000,2.000000,2.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"shared_store_transactions","Shared Store Transactions",20480,20480,20480
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"shared_load_transactions","Shared Load Transactions",20480,20480,20480
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gld_transactions","Global Load Transactions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gst_transactions","Global Store Transactions",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_read_transactions","L2 Read Transactions",17200,17200,17200
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_write_transactions","L2 Write Transactions",16397,16397,16397
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"global_hit_rate","Global Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gld_requested_throughput","Requested Global Load Throughput",94.775087GB/s,94.775087GB/s,94.774179GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gst_requested_throughput","Requested Global Store Throughput",94.775087GB/s,94.775087GB/s,94.774179GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gld_throughput","Global Load Throughput",94.775087GB/s,94.775087GB/s,94.774179GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gst_throughput","Global Store Throughput",94.775087GB/s,94.775087GB/s,94.774179GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"tex_cache_hit_rate","Unified Cache Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"tex_cache_throughput","Unified Cache Throughput",94.775087GB/s,94.775087GB/s,94.774179GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",94.775087GB/s,94.775087GB/s,94.774179GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",94.775087GB/s,94.775087GB/s,94.774179GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_read_throughput","L2 Throughput (Reads)",99.495331GB/s,99.495331GB/s,99.495053GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_write_throughput","L2 Throughput (Writes)",94.850287GB/s,94.850287GB/s,94.849616GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"sysmem_write_throughput","System Memory Write Throughput",29.617214MB/s,29.617214MB/s,29.563904MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"shared_load_throughput","Shared Memory Load Throughput",473.875437GB/s,473.875437GB/s,473.874621GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"shared_store_throughput","Shared Memory Store Throughput",473.875437GB/s,473.875437GB/s,473.874621GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gld_efficiency","Global Memory Load Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"gst_efficiency","Global Memory Store Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"tex_cache_transactions","Unified Cache Transactions",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_sp","Floating Point Operations(Single Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_executed","Instructions Executed",330752,330752,330752
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_issued","Instructions Issued",332535,332535,332535
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",2.236323%,2.236323%,2.236323%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",15.786285%,15.786285%,15.786285%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_memory_dependency","Issue Stall Reasons (Data Request)",20.101177%,20.101177%,20.101177%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_texture","Issue Stall Reasons (Texture)",0.354955%,0.354955%,0.354955%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_sync","Issue Stall Reasons (Synchronization)",11.457512%,11.457512%,11.457512%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_other","Issue Stall Reasons (Other)",14.151115%,14.151115%,14.151115%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",7.873173%,7.873173%,7.873173%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",10.083209%,10.083209%,10.083209%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"shared_efficiency","Shared Memory Efficiency",60.000000%,60.000000%,60.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_fp_32","FP Instructions(Single)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_integer","Integer Instructions",7176192,7176192,7176192
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_bit_convert","Bit-Convert Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_control","Control-Flow Instructions",98304,98304,98304
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_compute_ld_st","Load/Store Instructions",1310720,1310720,1310720
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_misc","Misc Instructions",573440,573440,573440
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"issue_slots","Issue Slots",294647,294647,294647
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"cf_issued","Issued Control-Flow Instructions",5120,5120,5120
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"cf_executed","Executed Control-Flow Instructions",5120,5120,5120
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"ldst_issued","Issued Load/Store Instructions",81920,81920,81920
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"ldst_executed","Executed Load/Store Instructions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",2.846993%,2.846993%,2.846993%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"stall_not_selected","Issue Stall Reasons (Not Selected)",15.109258%,15.109258%,15.109258%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"sm_activity","Multiprocessor Activity",43.020772%,43.020772%,43.020772%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"achieved_occupancy","Achieved Occupancy",0.524491,0.524491,0.524491
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"executed_ipc","Executed IPC",2.855125,2.855125,2.855125
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"issued_ipc","Issued IPC",2.594302,2.594302,2.594302
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"issue_slot_utilization","Issue Slot Utilization",57.467877%,57.467877%,57.467877%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",5.890575,5.890575,5.890575
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"l2_utilization","L2 Cache Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"shared_utilization","Shared Memory Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"special_fu_utilization","Special Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"tex_fu_utilization","Texture Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Mid (6)","Mid (6)","Mid (6)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"dram_read_transactions","Device Memory Read Transactions",120,120,120
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"dram_write_transactions","Device Memory Write Transactions",3070,3070,3070
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"dram_read_throughput","Device Memory Read Throughput",710.813154MB/s,710.813154MB/s,710.487366MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"dram_write_throughput","Device Memory Write Throughput",17.758760GB/s,17.758760GB/s,17.758459GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"dram_utilization","Device Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortIDCT(short*, int)",1,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_per_warp","Instructions per warp",110.000000,110.000000,110.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"branch_efficiency","Branch Efficiency",75.000000%,75.000000%,75.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"warp_execution_efficiency","Warp Execution Efficiency",63.512289%,63.512289%,63.512289%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",59.399823%,59.399823%,59.399823%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_replay_overhead","Instruction Replay Overhead",0.001425,0.001425,0.001425
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gld_transactions_per_request","Global Load Transactions Per Request",8.000000,8.000000,8.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gst_transactions_per_request","Global Store Transactions Per Request",8.000000,8.000000,8.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"shared_store_transactions","Shared Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"shared_load_transactions","Shared Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gld_transactions","Global Load Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gst_transactions","Global Store Transactions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_read_transactions","L2 Read Transactions",32912,32912,32912
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_write_transactions","L2 Write Transactions",65549,65549,65549
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"global_hit_rate","Global Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gld_requested_throughput","Requested Global Load Throughput",43.487821GB/s,43.487821GB/s,43.487176GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gst_requested_throughput","Requested Global Store Throughput",43.487821GB/s,43.487821GB/s,43.487176GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gld_throughput","Global Load Throughput",86.975641GB/s,86.975641GB/s,86.975284GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gst_throughput","Global Store Throughput",173.951283GB/s,173.951283GB/s,173.950568GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"tex_cache_hit_rate","Unified Cache Hit Rate",25.000000%,25.000000%,25.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"tex_cache_throughput","Unified Cache Throughput",86.975641GB/s,86.975641GB/s,86.975284GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",86.975641GB/s,86.975641GB/s,86.975284GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",173.951283GB/s,173.951283GB/s,173.950568GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_read_throughput","L2 Throughput (Reads)",87.357858GB/s,87.357858GB/s,87.357126GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_write_throughput","L2 Throughput (Writes)",173.985788GB/s,173.985788GB/s,173.985027GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"sysmem_write_throughput","System Memory Write Throughput",13.589944MB/s,13.589944MB/s,13.351440MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"shared_load_throughput","Shared Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"shared_store_throughput","Shared Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gld_efficiency","Global Memory Load Efficiency",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"gst_efficiency","Global Memory Store Efficiency",25.000000%,25.000000%,25.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"tex_cache_transactions","Unified Cache Transactions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_sp","Floating Point Operations(Single Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",262144,262144,262144
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_executed","Instructions Executed",901120,901120,901120
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_issued","Instructions Issued",902404,902404,902404
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",5.062562%,5.062562%,5.062562%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",38.843547%,38.843547%,38.843547%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_memory_dependency","Issue Stall Reasons (Data Request)",13.414059%,13.414059%,13.414059%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_sync","Issue Stall Reasons (Synchronization)",12.874441%,12.874441%,12.874441%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_other","Issue Stall Reasons (Other)",23.365671%,23.365671%,23.365671%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",0.815755%,0.815755%,0.815755%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",1.198265%,1.198265%,1.198265%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"shared_efficiency","Shared Memory Efficiency",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_fp_32","FP Instructions(Single)",262144,262144,262144
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_integer","Integer Instructions",11772380,11772380,11772380
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_bit_convert","Bit-Convert Instructions",1310720,1310720,1310720
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_control","Control-Flow Instructions",899615,899615,899615
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_compute_ld_st","Load/Store Instructions",786432,786432,786432
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_misc","Misc Instructions",2097152,2097152,2097152
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"issue_slots","Issue Slots",812292,812292,812292
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"cf_issued","Issued Control-Flow Instructions",49152,49152,49152
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"cf_executed","Executed Control-Flow Instructions",49152,49152,49152
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"ldst_issued","Issued Load/Store Instructions",114688,114688,114688
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"ldst_executed","Executed Load/Store Instructions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",2.095975%,2.095975%,2.095975%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"stall_not_selected","Issue Stall Reasons (Not Selected)",2.329724%,2.329724%,2.329724%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"sm_activity","Multiprocessor Activity",66.180422%,66.180422%,66.180422%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"achieved_occupancy","Achieved Occupancy",0.759004,0.759004,0.759004
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"executed_ipc","Executed IPC",2.318387,2.318387,2.318387
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"issued_ipc","Issued IPC",2.321691,2.321691,2.321691
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"issue_slot_utilization","Issue Slot Utilization",52.246298%,52.246298%,52.246298%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",3.380001,3.380001,3.380001
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"l2_utilization","L2 Cache Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"shared_utilization","Shared Memory Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"special_fu_utilization","Special Function Unit Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"tex_fu_utilization","Texture Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Mid (5)","Mid (5)","Mid (5)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"dram_read_transactions","Device Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"dram_write_transactions","Device Memory Write Transactions",46,46,46
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"dram_read_throughput","Device Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"dram_write_throughput","Device Memory Write Throughput",125.027484MB/s,125.027484MB/s,124.931335MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"dram_utilization","Device Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelQuantizationShort(short*, int)",1,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_per_warp","Instructions per warp",324.000000,324.000000,324.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"branch_efficiency","Branch Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"warp_execution_efficiency","Warp Execution Efficiency",86.882716%,86.882716%,86.882716%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",86.574074%,86.574074%,86.574074%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_replay_overhead","Instruction Replay Overhead",0.005434,0.005434,0.005434
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gld_transactions_per_request","Global Load Transactions Per Request",4.000000,4.000000,4.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gst_transactions_per_request","Global Store Transactions Per Request",2.000000,2.000000,2.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"shared_store_transactions","Shared Store Transactions",20480,20480,20480
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"shared_load_transactions","Shared Load Transactions",20480,20480,20480
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gld_transactions","Global Load Transactions",32768,32768,32768
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gst_transactions","Global Store Transactions",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_read_transactions","L2 Read Transactions",17200,17200,17200
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_write_transactions","L2 Write Transactions",16397,16397,16397
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"global_hit_rate","Global Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gld_requested_throughput","Requested Global Load Throughput",91.472696GB/s,91.472696GB/s,91.472641GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gst_requested_throughput","Requested Global Store Throughput",91.472696GB/s,91.472696GB/s,91.472641GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gld_throughput","Global Load Throughput",91.472696GB/s,91.472696GB/s,91.472641GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gst_throughput","Global Store Throughput",91.472696GB/s,91.472696GB/s,91.472641GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"tex_cache_hit_rate","Unified Cache Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"tex_cache_throughput","Unified Cache Throughput",91.472696GB/s,91.472696GB/s,91.472641GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",91.472696GB/s,91.472696GB/s,91.472641GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",91.472696GB/s,91.472696GB/s,91.472641GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_read_throughput","L2 Throughput (Reads)",96.028465GB/s,96.028465GB/s,96.027739GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_write_throughput","L2 Throughput (Writes)",91.545275GB/s,91.545275GB/s,91.544352GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"sysmem_write_throughput","System Memory Write Throughput",28.585217MB/s,28.585217MB/s,27.656555MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"shared_load_throughput","Shared Memory Load Throughput",457.363479GB/s,457.363479GB/s,457.363203GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"shared_store_throughput","Shared Memory Store Throughput",457.363479GB/s,457.363479GB/s,457.363203GB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gld_efficiency","Global Memory Load Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"gst_efficiency","Global Memory Store Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"tex_cache_transactions","Unified Cache Transactions",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_sp","Floating Point Operations(Single Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_executed","Instructions Executed",331776,331776,331776
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_issued","Instructions Issued",333579,333579,333579
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",9.152850%,9.152850%,9.152850%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",14.773542%,14.773542%,14.773542%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_memory_dependency","Issue Stall Reasons (Data Request)",18.696288%,18.696288%,18.696288%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_texture","Issue Stall Reasons (Texture)",1.219171%,1.219171%,1.219171%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_sync","Issue Stall Reasons (Synchronization)",12.013869%,12.013869%,12.013869%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_other","Issue Stall Reasons (Other)",7.336690%,7.336690%,7.336690%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",7.601803%,7.601803%,7.601803%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",10.189140%,10.189140%,10.189140%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"shared_efficiency","Shared Memory Efficiency",60.000000%,60.000000%,60.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_fp_32","FP Instructions(Single)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_integer","Integer Instructions",7176192,7176192,7176192
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_bit_convert","Bit-Convert Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_control","Control-Flow Instructions",98304,98304,98304
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_compute_ld_st","Load/Store Instructions",1310720,1310720,1310720
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_misc","Misc Instructions",606208,606208,606208
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"issue_slots","Issue Slots",298763,298763,298763
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"cf_issued","Issued Control-Flow Instructions",5120,5120,5120
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"cf_executed","Executed Control-Flow Instructions",5120,5120,5120
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"ldst_issued","Issued Load/Store Instructions",81920,81920,81920
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"ldst_executed","Executed Load/Store Instructions",65536,65536,65536
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",5.728846%,5.728846%,5.728846%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"stall_not_selected","Issue Stall Reasons (Not Selected)",13.287801%,13.287801%,13.287801%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",16384,16384,16384
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"sm_activity","Multiprocessor Activity",42.020903%,42.020903%,42.020903%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"achieved_occupancy","Achieved Occupancy",0.467674,0.467674,0.467674
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"executed_ipc","Executed IPC",2.542228,2.542228,2.542228
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"issued_ipc","Issued IPC",2.557337,2.557337,2.557337
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"issue_slot_utilization","Issue Slot Utilization",57.260618%,57.260618%,57.260618%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",6.227514,6.227514,6.227514
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"l2_utilization","L2 Cache Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"shared_utilization","Shared Memory Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"special_fu_utilization","Special Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"tex_fu_utilization","Texture Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Mid (6)","Mid (6)","Mid (6)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"dram_read_transactions","Device Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"dram_write_transactions","Device Memory Write Transactions",44,44,44
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"dram_read_throughput","Device Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"dram_write_throughput","Device Memory Write Throughput",251.549912MB/s,251.549912MB/s,250.816345MB/s
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"dram_utilization","Device Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","CUDAkernelShortDCT(short*, int)",1,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
