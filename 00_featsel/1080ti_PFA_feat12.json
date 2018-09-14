@@ -1,0 +1,1 @@
+["local_hit_rate", "shared_load_throughput", "sysmem_write_throughput", "double_precision_fu_utilization", "stall_constant_memory_dependency", "l2_tex_read_hit_rate", "inst_replay_overhead", "tex_cache_hit_rate", "gld_throughput", "local_memory_overhead", "gst_requested_throughput", "flop_sp_efficiency"]
