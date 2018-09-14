@@ -26,72 +26,6 @@ lock = Lock()
 manager = Manager()
 
 
-
-
-
-def run_test(jobID):
-    startT = time.time()
-    time.sleep(jobID * 2 + 1)
-    endT = time.time()
-
-    return [startT, endT]
-
-
-#-----------------------------------------------------------------------------#
-# 
-#-----------------------------------------------------------------------------#
-def run_mp(lock, appQueList, total_jobs, jobID, app2dir_dd, GpuJobTable, pid):
-
-    startT = time.time()
-
-    ##for i in xrange(10):
-    ##    lock.acquire() 
-    ##    corun.value -= 1
-    ##    print corun.value
-
-    ##    #if corun.value <= 1:
-    ##    #    break_loop = True
-    ##    lock.release() 
-
-    ##    if corun.value <= 1:
-    ##        print corun.value
-    ##        break
-
-
-        
-
-    while True:
-        lock.acquire() 
-        #corun.value -= 1
-        #print corun.value
-        cur_app = appQueList[0]
-        del appQueList[0]
-        total_jobs.value -= 1
-        print pid, cur_app
-        lock.release() 
-
-
-        if total_jobs.value <=1:
-            break
-
-
-    ##STOP = False
-
-    ##while True:
-    ##    lock.acquire() 
-    ##    corun.value -= 1
-    ##    if corun.value == 0:
-    ##        STOP = True
-    ##    lock.release() 
-
-    ##    if STOP:
-    ##        break
-
-    endT = time.time()
-
-    print pid, startT, endT, endT - startT
-
-
 #-----------------------------------------------------------------------------#
 # Run incoming workload
 #-----------------------------------------------------------------------------#
@@ -103,7 +37,7 @@ def run_work(jobID, AppStat, appDir):
 
     AppStat[jobID, 0] = jobID 
     # avoid tagging gpu since we simulate with 1 gpu
-    GpuJobTable[jobID, 2] = 0 
+    AppStat[jobID, 2] = 0 
 
     # run the application 
     [startT, endT] = run_remote(app_dir=appDir, devid=0)
@@ -131,6 +65,7 @@ def run_work(jobID, AppStat, appDir):
 #=============================================================================#
 def main():
 
+    MAXCORUN = 2    # max jobs per gpu
     gpuNum = 1
 
     #----------------------------------------------------------------------
@@ -191,7 +126,6 @@ def main():
     #==================================#
     # run the apps in the queue 
     #==================================#
-    MAXCORUN = 2    # max jobs per gpu
     activeJobs = 0
     jobID = -1
 
@@ -227,7 +161,7 @@ def main():
                 jobs2del = []
 
                 for jid in current_jobid_list:
-                    if GpuJobTable[jid, 2] == 1: # check the status, if one is done
+                    if AppStat[jid, 2] == 1: # check the status, if one is done
                         jobs2del.append(jid)
                         break_loop = True
 

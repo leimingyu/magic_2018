@@ -34,7 +34,7 @@ class cd:
     """
 
     def __init__(self, newPath):
-        self.newPath = os.path.expanduser(newPath)/
+        self.newPath = os.path.expanduser(newPath)
 
     def __enter__(self):
         self.savedPath = os.getcwd()
@@ -78,8 +78,8 @@ def PrintGpuJobTable(GpuJobTable, total_jobs):
             GpuJobTable[row, 4],
             GpuJobTable[row, 4] - GpuJobTable[row, 3]))
 
-        start_list.append(GpuJobTable[row, 1])
-        end_list.append(GpuJobTable[row, 2])
+        start_list.append(GpuJobTable[row, 3])
+        end_list.append(GpuJobTable[row, 4])
 
 
     total_runtime = max(end_list) - min(start_list) 
