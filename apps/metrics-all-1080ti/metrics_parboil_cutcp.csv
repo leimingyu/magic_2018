@@ -1,0 +1,126 @@
+==14731== NVPROF is profiling process 14731, command: ./cutcp -i ../../datasets/cutcp/small/input/watbox.sl40.pqr -o out_small -d 0
+==14731== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==14731== Profiling application: ./cutcp -i ../../datasets/cutcp/small/input/watbox.sl40.pqr -o out_small -d 0
+==14731== Profiling result:
+==14731== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_per_warp","Instructions per warp",31499.388430,70065.018595,56883.416228
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"branch_efficiency","Branch Efficiency",99.994266%,99.997368%,99.996537%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"warp_execution_efficiency","Warp Execution Efficiency",91.838338%,92.588288%,92.140368%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",84.124648%,85.985534%,84.714437%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_replay_overhead","Instruction Replay Overhead",0.000074,0.000165,0.000098
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",1.982759,1.982759,1.982759
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gld_transactions_per_request","Global Load Transactions Per Request",7.976190,7.976190,7.976190
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gst_transactions_per_request","Global Store Transactions Per Request",4.000000,4.000000,4.000000
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"shared_store_transactions","Shared Store Transactions",83490,83490,83490
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"shared_load_transactions","Shared Load Transactions",938668,1996292,1593205
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gld_transactions","Global Load Transactions",324280,324280,324280
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gst_transactions","Global Store Transactions",7744,7744,7744
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_read_transactions","L2 Read Transactions",163916,164636,164290
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_write_transactions","L2 Write Transactions",7757,7757,7757
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"global_hit_rate","Global Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gld_requested_throughput","Requested Global Load Throughput",10.841171GB/s,23.073519GB/s,13.329089GB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gst_requested_throughput","Requested Global Store Throughput",530.214180MB/s,1.102019GB/s,650.405884MB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gld_throughput","Global Load Throughput",10.841171GB/s,23.073519GB/s,13.329089GB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gst_throughput","Global Store Throughput",530.214180MB/s,1.102019GB/s,650.405884MB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"tex_cache_hit_rate","Unified Cache Hit Rate",50.000000%,50.000000%,50.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",50.000000%,97.804752%,66.500751%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"tex_cache_throughput","Unified Cache Throughput",10.841171GB/s,23.073519GB/s,13.329089GB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",10.841171GB/s,23.073519GB/s,13.329089GB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",530.214180MB/s,1.102019GB/s,650.405884MB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_read_throughput","L2 Throughput (Reads)",11.008061GB/s,23.326254GB/s,13.506040GB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_write_throughput","L2 Throughput (Writes)",531.104260MB/s,1.103869GB/s,652.313232MB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"sysmem_write_throughput","System Memory Write Throughput",350.554688KB/s,746.093750KB/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"shared_load_throughput","Shared Memory Load Throughput",506.309849GB/s,534.312903GB/s,523.934141GB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"shared_store_throughput","Shared Memory Store Throughput",22.329577GB/s,47.524561GB/s,27.455389GB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gld_efficiency","Global Memory Load Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"gst_efficiency","Global Memory Store Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"tex_cache_transactions","Unified Cache Transactions",162140,162140,162140
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_sp","Floating Point Operations(Single Precision)",245936547,602789450,480309725
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",24773120,59118848,46008459
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",89112842,217238988,172255913
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",42937743,109192626,89789438
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",11546245,29998552,24803994
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_executed","Instructions Executed",15245704,33911469,27531573
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_issued","Instructions Issued",15248228,33913986,27534094
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",18.855005%,21.257394%,20.032208%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",65.143858%,69.816720%,68.214534%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_memory_dependency","Issue Stall Reasons (Data Request)",1.637119%,3.392823%,2.140314%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_sync","Issue Stall Reasons (Synchronization)",2.768503%,3.834904%,3.239278%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_other","Issue Stall Reasons (Other)",3.640480%,3.934963%,3.744611%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",0.145661%,0.304347%,0.190114%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",0.408787%,0.483539%,0.433442%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"shared_efficiency","Shared Memory Efficiency",121.974783%,128.002214%,126.197535%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_fp_32","FP Instructions(Single)",226055971,548061386,438903668
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_integer","Integer Instructions",42205568,46451968,44805422
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_bit_convert","Bit-Convert Instructions",139392,139392,139392
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_control","Control-Flow Instructions",81781872,172366960,137829162
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_compute_ld_st","Load/Store Instructions",34685712,68529680,55630910
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_misc","Misc Instructions",34622682,82608796,68216627
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"issue_slots","Issue Slots",13155652,29333458,23835047
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"cf_issued","Issued Control-Flow Instructions",3360346,7263693,5842556
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"cf_executed","Executed Control-Flow Instructions",3360346,7263693,5842556
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"ldst_issued","Issued Load/Store Instructions",1224712,2282336,1879249
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"ldst_executed","Executed Load/Store Instructions",1097420,2155044,1751957
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",162140,162140,162140
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",0.003834%,0.007878%,0.004964%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"stall_not_selected","Issue Stall Reasons (Not Selected)",1.738673%,2.205720%,2.000535%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",7744,7744,7744
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"sm_activity","Multiprocessor Activity",92.091869%,93.371699%,92.862910%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"achieved_occupancy","Achieved Occupancy",0.190136,0.198538,0.192493
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"executed_ipc","Executed IPC",1.424478,1.521828,1.491864
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"issued_ipc","Issued IPC",1.444998,1.535102,1.495071
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"issue_slot_utilization","Issue Slot Utilization",31.167387%,33.281015%,32.352074%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",1.444749,1.565361,1.513643
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"l2_utilization","L2 Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"shared_utilization","Shared Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"special_fu_utilization","Special Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"tex_fu_utilization","Texture Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",8.275405%,9.759857%,9.387109%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"dram_read_transactions","Device Memory Read Transactions",183,463,272
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"dram_write_transactions","Device Memory Write Transactions",3671,11471,9785
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"dram_read_throughput","Device Memory Read Throughput",12.797301MB/s,67.469051MB/s,21.934509MB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"dram_write_throughput","Device Memory Write Throughput",534.943604MB/s,1.245655GB/s,823.020935MB/s
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"dram_utilization","Device Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","cuda_cutoff_potential_lattice6overlap(int, int, float4*, float, float, float, float*, int)",11,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
