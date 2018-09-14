@@ -1,0 +1,126 @@
+==11860== NVPROF is profiling process 11860, command: ./interval
+==11860== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==11860== Profiling application: ./interval
+==11860== Profiling result:
+==11860== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_per_warp","Instructions per warp",3347.883789,3347.883789,3347.883789
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"branch_efficiency","Branch Efficiency",99.937273%,99.937273%,99.937273%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"warp_execution_efficiency","Warp Execution Efficiency",99.539202%,99.539211%,99.539207%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",93.054916%,93.054927%,93.054922%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_replay_overhead","Instruction Replay Overhead",0.000425,0.000565,0.000520
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",12.819822,12.819822,12.819822
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",5.555688,5.555760,5.555717
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gld_transactions_per_request","Global Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gst_transactions_per_request","Global Store Transactions Per Request",13.338182,13.338182,13.338182
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"shared_store_transactions","Shared Store Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"shared_load_transactions","Shared Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"local_load_transactions","Local Load Transactions",1234395,1234395,1234395
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"local_store_transactions","Local Store Transactions",691122,691131,691126
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gld_transactions","Global Load Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gst_transactions","Global Store Transactions",139384,139384,139384
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_read_transactions","L2 Read Transactions",617150,618478,617688
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_write_transactions","L2 Write Transactions",830519,830528,830523
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"global_hit_rate","Global Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"local_hit_rate","Local Hit Rate",50.057559%,50.088829%,50.070198%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gld_requested_throughput","Requested Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gst_requested_throughput","Requested Global Store Throughput",5.207134GB/s,6.526453GB/s,5.342066GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gld_throughput","Global Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gst_throughput","Global Store Throughput",9.844107GB/s,12.338283GB/s,10.099262GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"local_memory_overhead","Local Memory Overhead",90.348746%,90.386062%,90.366374%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"tex_cache_hit_rate","Unified Cache Hit Rate",47.635062%,47.647583%,47.641261%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",99.276787%,99.380642%,99.331462%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",84.696724%,84.746769%,84.724664%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"tex_cache_throughput","Unified Cache Throughput",43.605076GB/s,54.653185GB/s,44.738874GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",43.525269GB/s,54.551564GB/s,44.659711GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",58.655787GB/s,73.516461GB/s,60.180202GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_read_throughput","L2 Throughput (Reads)",43.608607GB/s,54.703996GB/s,44.758432GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_write_throughput","L2 Throughput (Writes)",58.656070GB/s,73.517612GB/s,60.181133GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"sysmem_write_throughput","System Memory Write Throughput",370.282227KB/s,464.099609KB/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"local_load_throughput","Local Memory Load Throughput",87.180136GB/s,109.268750GB/s,89.447014GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"local_store_throughput","Local Memory Store Throughput",48.811045GB/s,61.178974GB/s,50.080009GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"shared_load_throughput","Shared Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"shared_store_throughput","Shared Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gld_efficiency","Global Memory Load Efficiency",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"gst_efficiency","Global Memory Store Efficiency",52.895956%,52.895956%,52.895956%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"tex_cache_transactions","Unified Cache Transactions",617410,617410,617410
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_dp","Floating Point Operations(Double Precision)",59126268,59126268,59126268
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",16901549,16901549,16901549
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",13224438,13224438,13224438
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",15775843,15775843,15775843
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_sp","Floating Point Operations(Single Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",1469382,1469382,1469382
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_executed","Instructions Executed",6856466,6856466,6856466
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_issued","Instructions Issued",6859412,6860384,6859990
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",1.543003%,1.721489%,1.582779%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",88.464286%,88.889005%,88.702274%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_memory_dependency","Issue Stall Reasons (Data Request)",4.780887%,5.042426%,4.849969%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.000847%,0.000015%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_sync","Issue Stall Reasons (Synchronization)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_other","Issue Stall Reasons (Other)",4.467741%,4.772821%,4.584913%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",0.039667%,0.136446%,0.081300%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",0.084587%,0.087613%,0.085533%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"shared_efficiency","Shared Memory Efficiency",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_fp_32","FP Instructions(Single)",1469382,1469382,1469382
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_fp_64","FP Instructions(Double)",64849625,64849625,64849625
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_integer","Integer Instructions",38916682,38916682,38916682
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_bit_convert","Bit-Convert Instructions",931300,931300,931300
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_control","Control-Flow Instructions",19004274,19004274,19004274
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_compute_ld_st","Load/Store Instructions",7123906,7123906,7123906
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_misc","Misc Instructions",71873761,71873761,71873761
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"issue_slots","Issue Slots",6397109,6397787,6397479
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"cf_issued","Issued Control-Flow Instructions",789264,789264,789264
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"cf_executed","Executed Control-Flow Instructions",789264,789264,789264
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"ldst_issued","Issued Load/Store Instructions",1386746,1386746,1386746
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"ldst_executed","Executed Load/Store Instructions",235233,235233,235233
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",616102,616478,616325
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",0.024211%,0.026013%,0.024878%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"stall_not_selected","Issue Stall Reasons (Not Selected)",0.085490%,0.092358%,0.088338%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",830506,830515,830510
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"sm_activity","Multiprocessor Activity",90.344235%,94.152047%,92.346623%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"achieved_occupancy","Achieved Occupancy",0.391878,0.398441,0.395133
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"executed_ipc","Executed IPC",0.404196,0.407184,0.405898
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"issued_ipc","Issued IPC",0.404480,0.407493,0.406098
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"issue_slot_utilization","Issue Slot Utilization",9.430132%,9.500700%,9.467951%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",0.399530,0.401893,0.400715
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"tex_utilization","Unified Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"l2_utilization","L2 Cache Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"shared_utilization","Shared Memory Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"special_fu_utilization","Special Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"tex_fu_utilization","Texture Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Max (10)","Max (10)","Max (10)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",39.670689%,41.021262%,40.403575%
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"dram_read_transactions","Device Memory Read Transactions",4109,4833,4364
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"dram_write_transactions","Device Memory Write Transactions",223169,225669,224440
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"dram_read_throughput","Device Memory Read Throughput",298.490438MB/s,413.854886MB/s,323.295593MB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"dram_write_throughput","Device Memory Write Throughput",15.787042GB/s,19.955879GB/s,16.262755GB/s
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"dram_utilization","Device Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 Ti (0)","void test_interval_newton<double>(interval_gpu<double>*, int*, interval_gpu<double>, int)",100,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
