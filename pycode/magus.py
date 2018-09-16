@@ -207,8 +207,9 @@ def adjust_metric(metricName, metricValue):
     Adjust metric from dataframe containing nvprof results.
     """ 
     metricValue_str= str(metricValue)
+    #adjustedV = float(metricValue)  # apply float as default
 
-    adjustedV = float(metricValue)  # apply float as default
+    adjustedV = None
 
     #
     # update the value if the metric belongs to the following 3 groups
@@ -234,6 +235,14 @@ def adjust_metric(metricName, metricValue):
     elif metricName in Utilization2decimal_Metrics:
         adjustedV = float(metricValue_str[metricValue_str.find('(') + 1 : metricValue_str.rfind(')')]) * 0.1
         #print('{} in Utilization2decimal_Metrics.'.format(local_metric_value))
+
+    else:
+        adjustedV = float(metricValue)
+
+
+    if adjustedV == None:
+        print "Error: adjustedV is None!"
+        sys.exit(1)
 
     #print('{} : {}'.format(metricName, metricValue))
     #print('{} : {}'.format(metricName, adjustedV))
