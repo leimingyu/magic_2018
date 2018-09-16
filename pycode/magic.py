@@ -8,7 +8,6 @@ import sys
 METRICS_COLS = ['Device', 'Kernel', 'Invocations', 'Metric Name', 'Metric Description',
                 'Min', 'Max', 'Avg']
 
-
 Percentage2decimal_Metrics = ['sm_efficiency', 'branch_efficiency', 
         'warp_execution_efficiency', 'warp_nonpred_execution_efficiency', 
         'issue_slot_utilization', 'global_hit_rate', 'local_hit_rate',
@@ -18,7 +17,7 @@ Percentage2decimal_Metrics = ['sm_efficiency', 'branch_efficiency',
         'stall_constant_memory_dependency', 'stall_pipe_busy',
         'stall_memory_throttle', 'stall_not_selected', 'local_memory_overhead', 
         'tex_cache_hit_rate','l2_tex_read_hit_rate', 'l2_tex_write_hit_rate', 
-        'flop_sp_efficiency', 'flop_dp_efficiency']
+        'flop_sp_efficiency', 'flop_dp_efficiency', 'sm_activity', 'flop_hp_efficiency']
 
 
 Throughput_Metrics = ['gld_requested_throughput', 'gst_requested_throughput', 
@@ -35,7 +34,7 @@ Utilization2decimal_Metrics = ['cf_fu_utilization', 'tex_fu_utilization',
         'special_fu_utilization', 'single_precision_fu_utilization', 
         'dram_utilization', 'tex_utilization', 'shared_utilization', 
         'l2_utilization', 'sysmem_utilization', 'sysmem_read_utilization', 
-        'sysmem_write_utilization']
+        'sysmem_write_utilization', 'half_precision_fu_utilization']
 
 Cols2norm_Full = ['ipc',
         'issued_ipc',
@@ -277,4 +276,23 @@ def convert_metrics_with_max(df_app, targetmetric):
     print('For {}, the max value is {}.'.format(targetmetric, maxV))
 
     return maxV
+
+
+#------------------------------------------------------------------------------
+#  Save the dataframe to data dict
+#  Input: df contains AppName + Profiling Metrics
+#  Output: dict that use AppName as the key, and Metrics as the value
+#------------------------------------------------------------------------------
+def gen_app2metric(df_app):
+    """
+    Generate app2metric_dd from input dataframe. dict[appName] = appMetrics.
+    """
+    app2metric_dd = {}
+    metricCol = df_app.columns[1:]
+    for index, row in df_app.iterrows():
+        app_name = row['AppName']
+        app_metr = row[metricCol]
+        app2metric_dd[app_name] = app_metr
+
+    return app2metric_dd 
 
