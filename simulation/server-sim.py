@@ -23,25 +23,21 @@ lock = Lock()
 manager = Manager()
 
 
-
 #-----------------------------------------------------------------------------#
 # Run incoming workload
 #-----------------------------------------------------------------------------#
-def run_work(jobID, GpuJobTable, appName, app2dir_dd):
-    GpuJobTable[jobID, 0] = jobID 
-    GpuJobTable[jobID, 3] = 0 
+def run_work(jobID, AppStat, appDir):
 
-    #=========================#
+    #
+    #    jobid      gpu     status      starT       endT
+    #
+
+    AppStat[jobID, 0] = jobID 
+    # avoid tagging gpu since we simulate with 1 gpu
+    AppStat[jobID, 2] = 0 
+
     # run the application 
-    #=========================#
-
-
-    app_dir = app2dir_dd[appName]
-    app_cmd = "./run.sh"
-    target_dev = 0
-
-    #[startT, endT] = run_test(jobID)
-    [startT, endT] = run_remote(app_dir=app_dir, app_cmd=app_cmd, devid=target_dev)
+    [startT, endT] = run_remote(app_dir=appDir, devid=0)
 
     logger.debug("jodID:{} \t start: {}\t end: {}\t duration: {}".format(jobID, 
         startT, endT, endT - startT))
@@ -54,12 +50,9 @@ def run_work(jobID, GpuJobTable, appName, app2dir_dd):
     #    jobid      gpu     starT       endT
     #=========================#
     # mark the job is done, and update the timing info
-    GpuJobTable[jobID, 1] = startT 
-    GpuJobTable[jobID, 2] = endT 
-    GpuJobTable[jobID, 3] = 1   # done
-
-
-
+    AppStat[jobID, 2] = 1   # done
+    AppStat[jobID, 3] = startT 
+    AppStat[jobID, 4] = endT 
 
 #-----------------------------------------------------------------------------#
 # GPU Job Table 
