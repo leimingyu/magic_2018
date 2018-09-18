@@ -41,10 +41,6 @@ def run_work(jobID, AppStat, appDir):
 
     logger.debug("jodID:{0:5d} \t start: {1:.3f}\t end: {2:.3f}\t duration: {3:.3f}".format(jobID, startT, endT, endT - startT))
 
-    #print("jodID:%5d \t start: %d \t end: {}\t duration: {}" % (jobID, startT, endT, endT - startT))
-    #print("jodID:{0:5d} \t start : {1:.3f}".format(jobID, startT))
-    #print("jodID:{0:5d} ".format(jobID))
-
     #=========================#
     # update gpu job table
     #
@@ -89,9 +85,10 @@ def FindNextJob(active_job_list, app2app_dist, waiting_list, app2metric):
     if len(active_job_list) >= 2 :
         activeJobs = len(active_job_list)
         # obtain the metrics in the active job list, apply max() method
-        active_mets = app2metric[active_job_list[0]].as_matrix()
+        active_mets = app2metric[active_job_list[0]].values
+
         for i in xrange(1, activeJobs):
-            curr_mat = app2metric[active_job_list[i]].as_matrix()
+            curr_mat = app2metric[active_job_list[i]].values
             active_mets = np.vstack((active_mets, curr_mat))
         active_mets = np.amax(active_mets, axis=0) # max value in each col
 
@@ -101,7 +98,7 @@ def FindNextJob(active_job_list, app2app_dist, waiting_list, app2metric):
         cur_dist = {}
         for app, app_metric in app2metric.iteritems():
             if app in waiting_list:
-                curr_mat = app2metric[app].as_matrix() 
+                curr_mat = app2metric[app].values
                 cur_dist[app] = np.linalg.norm(curr_mat - active_mets) # add to the dist dict
 
         #
@@ -187,10 +184,10 @@ def main():
     app2app_dist = {}
     for app1, metric1 in app2metric.iteritems():
         curApp_dist = {}
-        m1 = metric1.as_matrix()
+        m1 = metric1.values
         for app2, metric2 in app2metric.iteritems():
             if app1 <> app2:
-                m2 = metric2.as_matrix()
+                m2 = metric2.values
                 curApp_dist[app2] = np.linalg.norm(m1 - m2) 
 
         app2app_dist[app1] = curApp_dist
