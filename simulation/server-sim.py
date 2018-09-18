@@ -124,7 +124,10 @@ def FindNextJob(active_job_list, app2app_dist, waiting_list, app2metric):
 def main():
 
     MAXCORUN = int(args.maxCoRun)    # max jobs per gpu
+
     gpuNum = 1
+
+    logger.debug("Max Jobs Per GPU = {}.".format(MAXCORUN))
 
     #--------------------------------------------------------------------------
     # 1) application status table : 5 columns
