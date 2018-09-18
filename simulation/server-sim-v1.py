@@ -39,9 +39,11 @@ def run_work(jobID, AppStat, appDir):
     # run the application 
     [startT, endT] = run_remote(app_dir=appDir, devid=0)
 
-    logger.debug("jodID:{} \t start: {}\t end: {}\t duration: {}".format(jobID, 
-        startT, endT, endT - startT))
+    logger.debug("jodID:{0:5d} \t start: {1:.3f}\t end: {2:.3f}\t duration: {3:.3f}".format(jobID, startT, endT, endT - startT))
 
+    #print("jodID:%5d \t start: %d \t end: {}\t duration: {}" % (jobID, startT, endT, endT - startT))
+    #print("jodID:{0:5d} \t start : {1:.3f}".format(jobID, startT))
+    #print("jodID:{0:5d} ".format(jobID))
 
     #=========================#
     # update gpu job table
@@ -87,10 +89,10 @@ def FindNextJob(active_job_list, app2app_dist, waiting_list, app2metric):
     if len(active_job_list) >= 2 :
         activeJobs = len(active_job_list)
         # obtain the metrics in the active job list, apply max() method
-        active_mets = app2metric[active_jobs_list[0]].as_matrix()
+        active_mets = app2metric[active_job_list[0]].as_matrix()
         for i in xrange(1, activeJobs):
-            curr_mat = app2metric[active_jobs_list[i]].as_matrix()
-            active_mets = np.vstack(active_mets, curr_mat)
+            curr_mat = app2metric[active_job_list[i]].as_matrix()
+            active_mets = np.vstack((active_mets, curr_mat))
         active_mets = np.amax(active_mets, axis=0) # max value in each col
 
         #
@@ -116,7 +118,7 @@ def FindNextJob(active_job_list, app2app_dist, waiting_list, app2metric):
 #=============================================================================#
 def main():
 
-    MAXCORUN = 3    # max jobs per gpu
+    MAXCORUN = 5    # max jobs per gpu
     gpuNum = 1
 
     #--------------------------------------------------------------------------
@@ -341,5 +343,5 @@ def main():
 
 
 
-if _name__ == "__main__":
-    ain()
+if __name__ == "__main__":
+    main()
