@@ -22,6 +22,14 @@ from magic_common import *
 lock = Lock()
 manager = Manager()
 
+#-----------------------------------------------------------------------------#
+# arguments 
+#-----------------------------------------------------------------------------#
+import argparse
+parser = argparse.ArgumentParser(description='')
+parser.add_argument('-c', dest='maxCoRun', default=2, help='max collocated jobs per gpu')
+args = parser.parse_args()
+
 
 #-----------------------------------------------------------------------------#
 # Run incoming workload
@@ -115,7 +123,7 @@ def FindNextJob(active_job_list, app2app_dist, waiting_list, app2metric):
 #=============================================================================#
 def main():
 
-    MAXCORUN = 5    # max jobs per gpu
+    MAXCORUN = int(args.maxCoRun)    # max jobs per gpu
     gpuNum = 1
 
     #--------------------------------------------------------------------------
