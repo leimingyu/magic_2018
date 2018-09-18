@@ -39,9 +39,7 @@ def run_work(jobID, AppStat, appDir):
     # run the application 
     [startT, endT] = run_remote(app_dir=appDir, devid=0)
 
-    logger.debug("jodID:{} \t start: {}\t end: {}\t duration: {}".format(jobID, 
-        startT, endT, endT - startT))
-
+    logger.debug("jodID:{0:5d} \t start: {1:.3f}\t end: {2:.3f}\t duration: {3:.3f}".format(jobID, startT, endT, endT - startT))
 
     #=========================#
     # update gpu job table
@@ -57,34 +55,59 @@ def run_work(jobID, AppStat, appDir):
 #-----------------------------------------------------------------------------#
 # GPU Job Table 
 #-----------------------------------------------------------------------------#
-def FindNextJob(active_job_list, app2app_dist, waiting_list):
+def FindNextJob(active_job_list, app2app_dist, waiting_list, app2metric):
     if len(active_job_list) == 0:
         return waiting_list[0]
 
+    leastsim_app = None
 
+    #--------------------------------------------------#
+    # 
+    #--------------------------------------------------#
     if len(active_job_list) == 1:
         job_name = active_job_list[0]
-
         #--------------------------# 
         # run similarity analysis
         #--------------------------# 
         dist_dd = app2app_dist[job_name] # get the distance dict
         dist_sorted = sorted(dist_dd.items(), key=operator.itemgetter(1))
 
-        leastsim_app = None
         # the sorted in non-decreasing order, use reversed()
         for appname_and_dist in reversed(dist_sorted):
             sel_appname = appname_and_dist[0]
             if sel_appname in waiting_list: # find 1st app in the list, and exit
                 leastsim_app = sel_appname
                 break
-        return leastsim_app
 
+    #--------------------------------------------------#
+    # 
+    #--------------------------------------------------#
+    if len(active_job_list) >= 2 :
+        activeJobs = len(active_job_list)
+        # obtain the metrics in the active job list, apply max() method
+        active_mets = app2metric[active_job_list[0]].values
 
-    if len(active_job_list) > 1:
-        print "FindNextJob(): TODO multiple activejobs! "
-        sys.exit(1)
+        for i in xrange(1, activeJobs):
+            curr_mat = app2metric[active_job_list[i]].values
+            active_mets = np.vstack((active_mets, curr_mat))
+        active_mets = np.amax(active_mets, axis=0) # max value in each col
 
+        #
+        # now, I need to compute the dist to each app in the waiting list
+        #
+        cur_dist = {}
+        for app, app_metric in app2metric.iteritems():
+            if app in waiting_list:
+                curr_mat = app2metric[app].values
+                cur_dist[app] = np.linalg.norm(curr_mat - active_mets) # add to the dist dict
+
+        #
+        # sort the cur_dist, find the largest dist app
+        #
+        dist_sorted = sorted(cur_dist.items(), key=operator.itemgetter(1))
+        leastsim_app = dist_sorted[-1][0] # largest dist, (appName, appDist)
+
+    return leastsim_app
 
 
 #=============================================================================#
@@ -92,7 +115,7 @@ def FindNextJob(active_job_list, app2app_dist, waiting_list):
 #=============================================================================#
 def main():
 
-    MAXCORUN = 2    # max jobs per gpu
+    MAXCORUN = 5    # max jobs per gpu
     gpuNum = 1
 
     #--------------------------------------------------------------------------
@@ -126,29 +149,51 @@ def main():
     apps_num = len(app)
     logger.debug("Total GPU Applications = {}.".format(apps_num))
 
+
     #--------------------------------------------------------------------------
     # 3) app2metric dd 
     #--------------------------------------------------------------------------
     app2metric = np.load('../prepare/app2metric_featAll.npy').item()  # featAll
     logger.debug("app2metric = {}.".format(len(app2metric)))
 
+    #
+    # check the appName in app2metric  = appName in app_s1 
+    #
+    if apps_num <> len(app2metric):
+        print "The length of input app list and app2metric does not match!\n"
+        sys.exit(1)
+
+    app2metric_key = app2metric.keys()
+    app2metric_key_set = set(app2metric_key)
+    applist_set = set(app)
+
+    # to make sure for each coming app, there is always a metric vector for it
+    if applist_set == app2metric_key_set:
+        logger.debug("Perfect! Keep going!")
+    else:
+        print "Oops! The app names does not match!\n"
+        sys.exit(1)
+
+
     #--------------------------------------------------------------------------
-    # 4) compute pairwise dist 
+    # 4) compute pairwise dist
     #--------------------------------------------------------------------------
+    # NOTE: this is useful for maxJobRun = 2
     logger.debug("Compute Euclidean dist between apps.")
 
     app2app_dist = {}
     for app1, metric1 in app2metric.iteritems():
         curApp_dist = {}
-        m1 = metric1.as_matrix()
+        m1 = metric1.values
         for app2, metric2 in app2metric.iteritems():
             if app1 <> app2:
-                m2 = metric2.as_matrix()
+                m2 = metric2.values
                 curApp_dist[app2] = np.linalg.norm(m1 - m2) 
 
         app2app_dist[app1] = curApp_dist
 
     logger.debug("Finish computing distance.")
+
 
     #--------------------------------------------------------------------------
     # 5) Prepare dispatching 
@@ -200,12 +245,16 @@ def main():
     for i in xrange(1, apps_num):
         Dispatch = True if activeJobs < MAXCORUN else False
 
+        #----------------------------------------------------------------------
+        # keep dispatching 
+        #----------------------------------------------------------------------
         if Dispatch:
             # find the least similar job for corunning
-            leastsim_app = FindNextJob(active_job_list, app2app_dist, wait_queue)
+            leastsim_app = FindNextJob(active_job_list, app2app_dist, wait_queue, app2metric)
 
             if leastsim_app is None:
-                logger.debug("[Warning] leastsim_app is None!")
+                logger.debug("[Error] leastsim_app is None!")
+                #sys.exit(1)
             else:
                 #
                 # run the selected app
@@ -224,10 +273,13 @@ def main():
                 workers.append(process)
                 process.start()
 
+        #----------------------------------------------------------------------
+        # when reaching the limit
+        #----------------------------------------------------------------------
         else:
             # the active jobs reach limit, wait
+            # spin
             while True:
-                # spin
                 break_loop = False
 
                 current_running_jobs = 0
@@ -257,7 +309,7 @@ def main():
             if i == (apps_num - 1):
                 leastsim_app = wait_queue[0]
             else:
-                leastsim_app = FindNextJob(active_job_list, app2app_dist, wait_queue)
+                leastsim_app = FindNextJob(active_job_list, app2app_dist, wait_queue, app2metric)
 
             activeJobs += 1
             jobID += 1
