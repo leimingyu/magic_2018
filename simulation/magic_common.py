@@ -8,8 +8,8 @@ from subprocess import check_call, STDOUT, CalledProcessError
 DEVNULL = open(os.devnull, 'wb', 0)  # no std out
 
 
-#import pandas as pd
-#import numpy as np
+import pandas as pd
+import numpy as np
 #from math import *
 #import operator
 
@@ -68,22 +68,48 @@ def run_remote(app_dir, devid=0):
 #-----------------------------------------------------------------------------#
 # GPU Job Table 
 #-----------------------------------------------------------------------------#
-def PrintGpuJobTable(GpuJobTable, total_jobs):
-    print("JobID\tStart\tEnd\tDuration")
+def PrintGpuJobTable(GpuJobTable, total_jobs, id2name, saveFile=None):
+    """Print application trace."""
+
+    #
+    # gpujobtable cols:   
+    #            jobid / gpu / status / startT / endT
+    #
+
+    # To save, jobID / jobName / start / end / duration  (5 columns)
+    if saveFile:
+        traceCols = ['jobID', 'appName', 'start', 'end', 'duration (s)']
+        df_trace = pd.DataFrame(index=np.arange(0, total_jobs),columns=traceCols)
+
+    print("JobID\tStart\tEnd\tDuration\tAppName")
     start_list = []
     end_list = []
     for row in xrange(total_jobs):
-        print("{}\t{}\t{}\t{}".format(GpuJobTable[row, 0],
-            GpuJobTable[row, 3],
-            GpuJobTable[row, 4],
-            GpuJobTable[row, 4] - GpuJobTable[row, 3]))
+        jobid    = GpuJobTable[row,0]
+        startT   = GpuJobTable[row,3]
+        endT     = GpuJobTable[row,4]
+        duration = endT - startT 
+        appName  = id2name[jobid] 
 
-        start_list.append(GpuJobTable[row, 3])
-        end_list.append(GpuJobTable[row, 4])
+        if saveFile:
+            df_trace.loc[row, 'jobID']         = jobid
+            df_trace.loc[row, 'appName']       = appName 
+            df_trace.loc[row, 'start']         = startT 
+            df_trace.loc[row, 'end']           = endT 
+            df_trace.loc[row, 'duration (s)']  = duration 
 
+        print("{}\t{}\t{}\t{}\t{}".format(jobid, startT, endT, duration, appName))
+
+        start_list.append(startT)
+        end_list.append(endT)
 
     total_runtime = max(end_list) - min(start_list) 
     print("total runtime = {} (s)".format(total_runtime))
+
+    if saveFile:
+        df_trace.to_csv(saveFile, index=False, encoding='utf-8')
+
+
 
 
 #NVPROF_TRACE_COLS = [
