@@ -27,9 +27,10 @@ manager = Manager()
 #-----------------------------------------------------------------------------#
 import argparse
 parser = argparse.ArgumentParser(description='')
-parser.add_argument('-c', dest='maxCoRun', default=2, help='max collocated jobs per gpu')
+parser.add_argument('-c', dest='maxCoRun', default=2,        help='max collocated jobs per gpu')
+parser.add_argument('-s', dest='seed',     default=31415926, help='random seed for shuffling the app order')
+parser.add_argument('-f', dest='ofile',    default=None,     help='output file to save the app timing trace')
 args = parser.parse_args()
-
 
 #-----------------------------------------------------------------------------#
 # Run incoming workload
@@ -59,6 +60,7 @@ def run_work(jobID, AppStat, appDir):
     AppStat[jobID, 2] = 1   # done
     AppStat[jobID, 3] = startT 
     AppStat[jobID, 4] = endT 
+
 
 #-----------------------------------------------------------------------------#
 # GPU Job Table 
@@ -124,10 +126,10 @@ def FindNextJob(active_job_list, app2app_dist, waiting_list, app2metric):
 def main():
 
     MAXCORUN = int(args.maxCoRun)    # max jobs per gpu
-
+    RANDSEED = int(args.seed)
     gpuNum = 1
 
-    logger.debug("Max Jobs Per GPU = {}.".format(MAXCORUN))
+    logger.debug("MaxCoRun={}\trandseed={}\tsaveFile={}".format(MAXCORUN, RANDSEED, args.ofile))
 
     #--------------------------------------------------------------------------
     # 1) application status table : 5 columns
@@ -145,6 +147,8 @@ def main():
     arr = np.frombuffer(d_arr.get_obj())
     AppStat = arr.reshape((rows, cols))
 
+    id2name = {}
+
     #--------------------------------------------------------------------------
     # 2) input: app, app2dir_dd in app_info.py
     #--------------------------------------------------------------------------
@@ -153,9 +157,7 @@ def main():
         sys.exit(1)
 
     # three random sequences
-    app_s1 = genRandSeq(app, seed=31415926) # pi
-    #app_s2 = genRandSeq(app, seed=161803398875) # golden ratio
-    #app_s3 = genRandSeq(app, seed=299792458) # speed of light
+    app_s1 = genRandSeq(app, seed=RANDSEED) # pi
 
     apps_num = len(app)
     logger.debug("Total GPU Applications = {}.".format(apps_num))
@@ -164,7 +166,16 @@ def main():
     #--------------------------------------------------------------------------
     # 3) app2metric dd 
     #--------------------------------------------------------------------------
-    app2metric = np.load('../prepare/app2metric_featAll.npy').item()  # featAll
+    #app2metric = np.load('../prepare/app2metric_featAll.npy').item()  # featAll
+    #app2metric = np.load('../prepare/app2metric_feat9.npy').item()     # feat9
+    #app2metric = np.load('../prepare/app2metric_feat12.npy').item()     # feat12
+    #app2metric = np.load('../prepare/app2metric_feat14.npy').item()     # feat14
+    #app2metric = np.load('../prepare/app2metric_feat18.npy').item()     # feat18
+    #app2metric = np.load('../prepare/app2metric_feat26.npy').item()     # feat26
+    #app2metric = np.load('../prepare/app2metric_feat42.npy').item()     # feat42
+    #app2metric = np.load('../prepare/app2metric_feat64.npy').item()     # feat64
+    app2metric = np.load('../prepare/app2metric_featMystic.npy').item()     # featMystic
+
     logger.debug("app2metric = {}.".format(len(app2metric)))
 
     #
@@ -244,7 +255,8 @@ def main():
     app_idx = wait_queue.index(appName)   # remove the app from the waiting queue 
     del wait_queue[app_idx]
     name2jobid[appName] = jobID # update job info
-    jobid2name[jobID] = appName 
+    jobid2name[jobID] = appName
+    id2name[jobID] = appName
 
     process = Process(target=run_work, args=(jobID, AppStat, app2dir_dd[appName]))
     process.daemon = False
@@ -277,7 +289,8 @@ def main():
                 leastsim_idx = wait_queue.index(leastsim_app) # del app from list
                 del wait_queue[leastsim_idx]
                 name2jobid[leastsim_app] = jobID # update name to jobID
-                jobid2name[jobID] =leastsim_app 
+                jobid2name[jobID] = leastsim_app
+                id2name[jobID] = leastsim_app 
 
                 process = Process(target=run_work, args=(jobID, AppStat, app2dir_dd[leastsim_app]))
                 process.daemon = False
@@ -329,7 +342,8 @@ def main():
             leastsim_idx = wait_queue.index(leastsim_app) # del app from list
             del wait_queue[leastsim_idx]
             name2jobid[leastsim_app] = jobID # update name to jobID
-            jobid2name[jobID] = leastsim_app 
+            jobid2name[jobID] = leastsim_app
+            id2name[jobID] = leastsim_app 
 
             process = Process(target=run_work, args=(jobID, AppStat, app2dir_dd[leastsim_app]))
             process.daemon = False
@@ -343,11 +357,14 @@ def main():
         p.join()
 
     total_jobs = jobID + 1
-    PrintGpuJobTable(AppStat, total_jobs)
-
     if total_jobs <> apps_num:
         logger.debug("[Warning] job number doesn't match.")
 
+    # print out / save trace table 
+    if args.ofile:
+        PrintGpuJobTable(AppStat, total_jobs, id2name, saveFile=args.ofile)
+    else:
+        PrintGpuJobTable(AppStat, total_jobs, id2name)
 
 
 
