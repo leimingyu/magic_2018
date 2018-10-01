@@ -223,14 +223,14 @@ def main():
     appQueList = copy.deepcopy(app_s1)
     wait_queue = copy.deepcopy(app_s1)
 
-    name2indx_dd = {}
-    indx2name_dd = {}
-    for i, app_name in enumerate(appQueList):
-        name2indx_dd[app_name] = i
-        indx2name_dd[i] = app_name 
+    ##name2indx_dd = {}
+    ##indx2name_dd = {}
+    ##for i, app_name in enumerate(appQueList):
+    ##    name2indx_dd[app_name] = i
+    ##    indx2name_dd[i] = app_name 
 
-    #print appQueList[:3]
-    #print indx2name_dd[0], indx2name_dd[1], indx2name_dd[2]
+    ###print appQueList[:3]
+    ###print indx2name_dd[0], indx2name_dd[1], indx2name_dd[2]
 
     workers = [] # for mp processes
 
