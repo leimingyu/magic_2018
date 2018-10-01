@@ -7,12 +7,9 @@ import numpy as np
 import multiprocessing as mp
 from multiprocessing import Process, Lock, Manager, Value, Pool
 
-
-
 import logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger("[server]")
-
 
 # read app info
 sys.path.append('../prepare')
@@ -32,6 +29,7 @@ import argparse
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('-c', dest='maxCoRun', default=1,        help='max collocated jobs per gpu')
 parser.add_argument('-s', dest='seed',     default=31415926, help='random seed for shuffling the app order')
+parser.add_argument('-f', dest='ofile',    default=None,     help='output file to save the app timing trace')
 args = parser.parse_args()
 
 #-----------------------------------------------------------------------------#
@@ -65,8 +63,6 @@ def run_work(jobID, AppStat, appDir):
     AppStat[jobID, 4] = endT 
 
 
-
-
 #=============================================================================#
 # main program
 #=============================================================================#
@@ -76,8 +72,7 @@ def main():
     RANDSEED = int(args.seed)
     gpuNum = 1
 
-    logger.debug("MaxCoRun={}\trandseed={}".format(MAXCORUN, RANDSEED))
-
+    logger.debug("MaxCoRun={}\trandseed={}\tsaveFile={}".format(MAXCORUN, RANDSEED, args.ofile))
 
     #----------------------------------------------------------------------
     # 1) application status table : 5 columns
@@ -90,7 +85,7 @@ def main():
     #       ...
     #----------------------------------------------------------------------
     maxJobs = 10000
-    rows, cols = maxJobs, 6  # note: init with a large prefixed table
+    rows, cols = maxJobs, 5  # note: init with a large prefixed table
     d_arr = mp.Array(ctypes.c_double, rows * cols)
     arr = np.frombuffer(d_arr.get_obj())
     AppStat = arr.reshape((rows, cols))
@@ -208,10 +203,15 @@ def main():
         p.join()
 
     total_jobs = jobID + 1
-    PrintGpuJobTable(AppStat, total_jobs, id2name, saveFile='app_runtime.csv')
-
     if total_jobs <> apps_num:
         logger.debug("[Warning] job number doesn't match.")
+
+    
+    # print out / save trace table 
+    if args.ofile:
+        PrintGpuJobTable(AppStat, total_jobs, id2name, saveFile=args.ofile)
+    else:
+        PrintGpuJobTable(AppStat, total_jobs, id2name)
 
 
 if __name__ == "__main__":
