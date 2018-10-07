@@ -108,6 +108,7 @@ def PrintGpuJobTable(GpuJobTable, total_jobs, id2name, saveFile=None):
 
     if saveFile:
         df_trace.to_csv(saveFile, index=False, encoding='utf-8')
+        print("Done! Check the saved file {}.".format(saveFile))
 
 
 
