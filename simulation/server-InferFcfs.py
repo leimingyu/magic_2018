@@ -8,6 +8,7 @@ import multiprocessing as mp
 from multiprocessing import Process, Lock, Manager, Value, Pool
 
 from sklearn.externals import joblib  # to save/load model to disk
+#import pickle 
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -166,22 +167,35 @@ def main():
     # 3) load  [1] app2metric and [2] bestmodel for the selected feature set  
     #--------------------------------------------------------------------------
     app2metric = np.load('../prepare/app2metric_featAll.npy').item()  # featAll
-    # load model, predict app class 
-    bestmodel = joblib.load('../01_classification/featall_bestmodel.pkl')
+    bestmodel = joblib.load('../01_classification/featall_bestmodel.pkl') # load model, predict app class 
+    #bestmodel = pickle.load(open('../01_classification/featall_bestmodel.pkl', 'rb'))
+
+    #app2metric = np.load('../prepare/app2metric_feat9.npy').item()     # feat9
+    #bestmodel = joblib.load('../01_classification/feat9_bestmodel.pkl') # load model, predict app class 
+
+    #app2metric = np.load('../prepare/app2metric_feat12.npy').item()     # feat12
+    #bestmodel = joblib.load('../01_classification/feat12_bestmodel.pkl') # load model, predict app class 
+
+    #app2metric = np.load('../prepare/app2metric_feat14.npy').item()     # feat14
+    #bestmodel = joblib.load('../01_classification/feat14_bestmodel.pkl') # load model, predict app class 
+
+    #app2metric = np.load('../prepare/app2metric_feat18.npy').item()     # feat18
+    #bestmodel = joblib.load('../01_classification/feat18_bestmodel.pkl') # load model, predict app class 
+
+    #app2metric = np.load('../prepare/app2metric_feat26.npy').item()     # feat26
+    #bestmodel = joblib.load('../01_classification/feat26_bestmodel.pkl') # load model, predict app class 
+
+    #app2metric = np.load('../prepare/app2metric_feat42.npy').item()     # feat42
+    #bestmodel = joblib.load('../01_classification/feat42_bestmodel.pkl') # load model, predict app class 
+
+    #app2metric = np.load('../prepare/app2metric_feat64.npy').item()     # feat64
+    #bestmodel = joblib.load('../01_classification/feat64_bestmodel.pkl') # load model, predict app class 
+
+    #app2metric = np.load('../prepare/app2metric_featMystic.npy').item()     # featMystic
+    #bestmodel = joblib.load('../01_classification/featMystic_bestmodel.pkl') # load model, predict app class 
+
     app2class_dd = predict_appclass(app2metric, bestmodel) 
     app_s1_class = [app2class_dd[k] for k in app_s1] # list of class for each app_s1
-    #for i, eachapp in enumerate(app_s1): print eachapp, app_s1_class[i], app2class_dd[eachapp] 
-
-
-    ##app2metric = np.load('../prepare/app2metric_feat9.npy').item()     # feat9
-    ##app2metric = np.load('../prepare/app2metric_feat12.npy').item()     # feat12
-    ##app2metric = np.load('../prepare/app2metric_feat14.npy').item()     # feat14
-    ##app2metric = np.load('../prepare/app2metric_feat18.npy').item()     # feat18
-    ##app2metric = np.load('../prepare/app2metric_feat26.npy').item()     # feat26
-    ##app2metric = np.load('../prepare/app2metric_feat42.npy').item()     # feat42
-    ##app2metric = np.load('../prepare/app2metric_feat64.npy').item()     # feat64
-    ##app2metric = np.load('../prepare/app2metric_featMystic.npy').item()     # featMystic
-
 
     logger.debug("app2metric = {}.".format(len(app2metric)))
 
